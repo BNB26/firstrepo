@@ -77,12 +77,17 @@ func getSpecificEmployee(c *gin.Context) {
 	c.JSON(http.StatusBadRequest, gin.H{"error": "id not found"})
 }
 
+func Greet(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"message": "Hi User!!"})
+}
+
 func main() {
 	fmt.Println("hi")
 	//route
 	r := gin.Default()
 
 	//endpoint
+	r.GET("/", Greet)
 	r.GET("/getEmployee", getEmployee)
 	r.POST("/createEmployee", createEmployee)
 	r.PUT("/updateEmployee/:id", updateEmployee)
