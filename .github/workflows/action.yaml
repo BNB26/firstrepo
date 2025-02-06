@@ -3,7 +3,7 @@ name : first action
 on :
   push:
     branches:
-      -master 
+      - main
 
 jobs:
   hello:
@@ -12,5 +12,5 @@ jobs:
       - name : gin application 
         run : echo "gin application"
         
-        
+
        
