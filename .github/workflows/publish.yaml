@@ -20,7 +20,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         ## the name of our images
-        name: forbsey/go-api
+        name: bnb26/go-api
         ## Here we pass in our Docker Username
         username: ${{ secrets.DOCKER_USERNAME }}
         ## and our Docker password which 
