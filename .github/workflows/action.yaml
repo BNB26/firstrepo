@@ -7,7 +7,7 @@ on :
 
 jobs:
   hello:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name : gin application 
         run : echo "gin application"
