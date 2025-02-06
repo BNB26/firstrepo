@@ -95,7 +95,9 @@ func main() {
 	r.GET("/getSpecificEmployee/:id", getSpecificEmployee)
 
 	//port
-	r.Run(":8088")
+	if err := r.Run(":8088"); err != nil {
+		log.Fatalf("Failed to start server: %v", err)
+	}
 }
 
 // Among all most popular frameworks mostly used for building a RestAPIs Gin is most popular because of following features it brings in:
