@@ -23,5 +23,5 @@ jobs:
         name: bnb26/go-api
         ## Here we pass in our Docker Usernames
         username: ${{ secrets.DOCKER_USERNAME }}
-        ## and our Docker password which 
+        ## and our Docker password which is
         password: ${{ secrets.DOCKER_PASSWORD }}
