@@ -21,10 +21,16 @@ jobs:
       - name : lint
         run : |
           curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/main/install.sh | sh -s -- -b $(go env GOPATH)/bin latest
-      - name: Run linter
-        run: golangci-lint run
-#          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/main/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.26.0
+      - name: Add golangci-lint to PATH
+        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
 
+      - name: Verify golangci-lint installation
+        run: |
+          which golangci-lint
+          golangci-lint --version
+
+      - name: Run linter
+        run: golangci-lint run --verbose
 
           
 
